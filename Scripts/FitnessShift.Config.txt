@@ -1,0 +1,16 @@
+input=
+tree_file=
+root_id=
+focal_clades=
+focal_points=
+significance_threshold=
+output=
+
+#example:
+input=alignment.fasta
+tree_file=tree.newick
+root_id=node1
+focal_clades=A,B,C
+focal_points=node100,node200,node300
+significance_threshold=0.01
+output=ResultingTable.txt
