@@ -56,7 +56,11 @@ For checking reproducibility of the method, test data from the article is provid
 "Test Data" folder contains following files:
 
 **HIV1_allM.mafft.seq+PAMLancestors.fasta** - amino acid alignment of 3792 gp-160 sequences from 5 subtypes of type M together with reconstructed sequences from ancestral nodes of the phylogenetic tree. Amino acid positions in this file are filtered as described in the article. 
+
 **HIV1_allM.newick** - phylogenetic tree
+
 **FitnessShift.Config.txt** - control file for test data
+
 **HIV1_allM.VariableFitnessAA.subtypesAB.txt** - resulting output table made with **ResultingTable.pl** script
+
 **SiteNumbering.Alignment_vs_HXB2.txt** - a file for renumbering of sites in the alignment acording to numbering of gp-160 from HXB2 strain. This file is needed to renumber sites from the final output if you want to somehow use them.
