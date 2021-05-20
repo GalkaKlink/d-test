@@ -1,0 +1,16 @@
+input=HIV1_allM.mafft.seq+PAMLancestors.fasta
+tree_file=HIV1_allM.SUPERTREE.newick
+root_id=9000003793
+focal_clades=A,B
+focal_points=2,1
+significance_threshold=0.01
+output=HIV1_allM.VariableFitnessAA.subtypesAB.txt
+
+#example:
+input=alignment.fasta
+tree_file=tree.newick
+root_id=node1
+focal_clades=A,B,C
+focal_points=node100,node200,node300
+significance_threshold=0.01
+output=Results.txt
