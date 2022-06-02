@@ -60,6 +60,7 @@ while (<IN>)  {
     
     $k = $_;
     chomp($k);
+    $k =~ s/\>//;
 
     $v = <IN>;
     chomp($v);
@@ -156,9 +157,9 @@ foreach my $n(1..$lenseq) { #this is needed if parallel calculationes are not po
 		    my $n2 = $ancc -> id;
 		    
 		    my $s1 = $hash{$n1};
-			my $s2 = $hash{$n2};
+		    my $s2 = $hash{$n2};
 		    
-			my $aa1 = substr($s1,$n-1,1);
+		    my $aa1 = substr($s1,$n-1,1);
 		    my $aa2 = substr($s2,$n-1,1);
 		    #	print "aas\t".$aa1."\t".$aa2."\n";
 		    
