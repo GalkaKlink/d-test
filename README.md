@@ -36,7 +36,7 @@ files **\*.site** for each site of the alignment.
 
 2)**FitnessShift.pl** – for each amino acid in each protein site, calculates p-value of being “proximal” or “distal” for each focal node as well as corresponding z-scores. The default version is for running as an array of tasks, and the version for full alignment is named **FitnessShift.full_alignment.pl**.
 
-To run this script, it is needed to provide a common line argument with a name for the fasta file with an amino acid alignment for all sites (for script FitnessShift.full_alignment.pl) or for single site (for script FitnessShift.pl; such input files are made by script make_file.pl). In the latter case, you may use tools such as GNU Parallel (https://www.gnu.org/software/parallel/) to process many sites simultaneously.
+To run **FitnessShift.pl**, it is needed to provide a command line argument with name of the file made for a single site of interest with script **make_file.pl**. You may use tools such as GNU Parallel (https://www.gnu.org/software/parallel/) to process many sites simultaneously.
 
 An example of running with GNU Parallel is:
 parallel -j 10 perl FitnessShift.pl {}.site ::: {1..100}
