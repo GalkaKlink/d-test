@@ -14,7 +14,7 @@ If substitutions to **X** are biased towards nodes *N1* and *N2* with different 
 ### **Input files:** 
 to apply d-test, you need a **rooted phylogenetic tree** in \*.newick format and corresponding **amino acid alignment** which includes reconstructed ancestral states for internal nodes of the tree in \*.fasta format. The names of all internal and external nodes should correspond to each other in alignment and tree.  
 
-As all protein sites are considered independently, the program may treat them in parallel as distinct tasks. For these your machine should be able to proceed arrays of tasks. It will accelerate the calculations substantially, but  the version of script for iterative processing of each site also exists.
+As all protein sites are considered independently, the program may treat them in parallel as distinct tasks. For these your machine should be able to proceed arrays of tasks. It will accelerate the calculations substantially, but the version of script for iterative processing of each site also exists.
 
 **Control file FitnessShift.Config.txt:**
 Contains several lines to be filled by the user:
@@ -35,6 +35,11 @@ Contains several lines to be filled by the user:
 files **\*.site** for each site of the alignment.
 
 2)**FitnessShift.pl** – for each amino acid in each protein site, calculates p-value of being “proximal” or “distal” for each focal node as well as corresponding z-scores. The default version is for running as an array of tasks, and the version for full alignment is named **FitnessShift.full_alignment.pl**.
+
+To run this script, it is needed to provide a common line argument with a name for the fasta file with an amino acid alignment for all sites (for script FitnessShift.full_alignment.pl) or for single site (for script FitnessShift.pl; such input files are made by script make_file.pl). In the latter case, you may use tools such as GNU Parallel (https://www.gnu.org/software/parallel/) to process many sites simultaneously.
+
+An example of running with GNU Parallel is:
+parallel -j 10 perl FitnessShift.pl {}.site ::: {1..100}
 
 External branches that are longer than 10 medians of external branch length are excluded from the analysis as suspiciously long. You can cut easily find this step in the script and cut it if you do not want it to be done.
 
