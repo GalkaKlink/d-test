@@ -2,7 +2,7 @@
 # **Phylogeny-based test for detecting changes in amino acid preferences**
 
 ## *Reference:*
-https://www.biorxiv.org/content/10.1101/589572v3 - this article contains a precise description of the test and its application to Env gene of HIV-1
+https://journals.plos.org/ploscompbiol/article/authors?id=10.1371/journal.pcbi.1009878 - this article contains a precise description of the test and its application to Env gene of HIV-1
 Brief description:   
 The test finds amino acids, substitutions to which are biased towards or away from any chosen focal nodes (external or internal) of the phylogenetic tree. The significance of an amino acid **X** to be “proximal” or “distal” for a node *N* is calculated by comparing the mean evolutionary distance (i.e. the way between two points of the phylogenetic tree) between *N* and substitutions to **X** with the null-distribution obtained by calculating evolutionary distances between *N* and substitutions to any amino acids accounting for ancestral amino acids for **X**.
 
